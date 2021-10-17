@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "293069249583",
+    "firebase_url": "https://esp32-5e31b-default-rtdb.firebaseio.com",
+    "project_id": "esp32-5e31b",
+    "storage_bucket": "esp32-5e31b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:293069249583:android:0a02e9bbf44c9a60f43ada",
+        "android_client_info": {
+          "package_name": "com.example.smartgreenhouse"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "293069249583-aj5i17ul4tu3p82rj5oiu88ll02n9gjp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD60cxJ5BeQ1fV_U0MsZNElcTYOciuvWBE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "293069249583-aj5i17ul4tu3p82rj5oiu88ll02n9gjp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
