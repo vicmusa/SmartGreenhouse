@@ -5,6 +5,7 @@ import android.icu.text.UnicodeSet
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.DropBoxManager
+import android.util.Log
 import androidx.core.content.ContextCompat
 import com.androidplot.xy.*
 import com.github.mikephil.charting.charts.LineChart
@@ -33,20 +34,23 @@ class grafhumedad : AppCompatActivity() {
         setContentView(R.layout.activity_grafhumedad)
 
         //LLAMO LAS VARIABLES
-        var database = FirebaseDatabase.getInstance().getReference("AQUI TIENES QUE LLENAR EL PATH") // Ejemplo (Sensores/Historicos)
+        var database = FirebaseDatabase.getInstance().getReference("datos historicos") // Ejemplo (Sensores/Historicos)
         val listfecha = mutableListOf<Long>()
-        val listluz = mutableListOf<Int>()
+        val listluz = mutableListOf<String>()
         database.get().addOnCompleteListener {
             if(it.isSuccessful) {
                 val result = it.getResult()
                 for(i in result!!.children)
                 {
                     val fecha =i.key.toString().toLong()
-                    val luz = i.child("luz").toString().toInt()
+                    Log.e("AQUI", fecha.toString())
+                    val luz  = i.child("temperatura").value.toString()
                    // val x = i.child("NOMBRE DEL CHILD").tostring().toElvalorquequieres ejemplo toint, tofloat etc etc  tienes que repetir esto con todas las variables que vas a querer graficar
                     listfecha.add(fecha) // Creas listas como tantos valores tengas Fecha siempre tiene que existir
                     listluz.add(luz) // Esto es un ejemplo no me se los valores
                 }
+
+                Log.e("AQUI", listluz.toString())
 
                 var entryluz : ArrayList<Entry> = arrayListOf()
                 for((i, j) in listluz.withIndex())
