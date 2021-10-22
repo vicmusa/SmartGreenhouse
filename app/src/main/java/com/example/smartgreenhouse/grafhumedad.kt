@@ -44,7 +44,7 @@ class grafhumedad : AppCompatActivity() {
                 {
                     val fecha =i.key.toString().toLong()
                     Log.e("AQUI", fecha.toString())
-                    val luz  = i.child("temperatura").value.toString()
+                    val luz  = i.child("humedad").value.toString()
                    // val x = i.child("NOMBRE DEL CHILD").tostring().toElvalorquequieres ejemplo toint, tofloat etc etc  tienes que repetir esto con todas las variables que vas a querer graficar
                     listfecha.add(fecha) // Creas listas como tantos valores tengas Fecha siempre tiene que existir
                     listluz.add(luz) // Esto es un ejemplo no me se los valores
